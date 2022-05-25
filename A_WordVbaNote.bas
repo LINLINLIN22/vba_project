@@ -1,29 +1,30 @@
+'ä¸éœ€åœ¨VBAç’°å¢ƒä¸‹è¼¸å…¥æ­¤ç¨‹å¼ç¢¼ï¼Œç›´æ¥ä¿®æ”¹æ¨¡çµ„åç¨±å³å¯
 Attribute VB_Name = "A_WordVbaNote"
 Sub note()
-'³Ì«á¤@­¶
+'æœ€å¾Œä¸€é 
 lastpage = ActiveDocument.ComputeStatistics(wdStatisticPages)
 
-'´«¦æ
-    Selection.InsertBreak Type:=wdPageBreak '´«¦æ
+'æ›è¡Œ
+    Selection.InsertBreak Type:=wdPageBreak 'æ›è¡Œ
     
-'¨ì³Ì«á¤@­¶³Ì«á¤@¬q
+'åˆ°æœ€å¾Œä¸€é æœ€å¾Œä¸€æ®µ
     Selection.EndKey Unit:=wdStory
     
     
-''¤£­­WORD VB³£¥i''
+''ä¸é™WORD VBéƒ½å¯''
 
-'¿é¥Xªº¸ê®Æ§¨
+'è¼¸å‡ºçš„è³‡æ–™å¤¾
     Dim xDlg As FileDialog
     Dim xFolder
-    Set xDlg = Application.FileDialog(msoFileDialogFolderPicker) '¤]¥i¿ï¨ä¥LÀÉ®×
-        xDlg.Title = "½Ğ¿ï¾Ü­n¿é¥Xªº¸ê®Æ§¨"
+    Set xDlg = Application.FileDialog(msoFileDialogFolderPicker) 'ä¹Ÿå¯é¸å…¶ä»–æª”æ¡ˆ
+        xDlg.Title = "è«‹é¸æ“‡è¦è¼¸å‡ºçš„è³‡æ–™å¤¾"
 
-'¿ï¾Ü­n¿é¥Xªº¸ê®Æ§¨¡A¦³¿ï¨ì´N¦s¦¨ÅÜ¼Æ
+'é¸æ“‡è¦è¼¸å‡ºçš„è³‡æ–™å¤¾ï¼Œæœ‰é¸åˆ°å°±å­˜æˆè®Šæ•¸
 If xDlg.Show <> -1 Then Exit Sub
 xFolder = xDlg.SelectedItems(1)
 End If
 
-'¬İ¬İªøÔ£¼Ë
+'çœ‹çœ‹é•·å•¥æ¨£
 Debug.Print xFolder
 
     
