@@ -1,3 +1,5 @@
+
+'模組名稱，只有output 成 txt檔才會出現，在VBA環境直接編輯模組名稱即可
 Attribute VB_Name = "A_WordVbaNote"
 Sub note()
 
